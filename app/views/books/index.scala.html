@@ -1,0 +1,18 @@
+@(books : Set[Book])
+
+<html>
+    <head>
+        <title>All Books</title>
+    </head>
+    <body>
+
+        <h1>All Books</h1>
+
+        @for(book <- books){
+            <a href="#">@book.getTitle()</a>
+            <p>Price : @book.getPrice()</p>
+            <p>Author : @book.getAuthor()</p>
+        }
+
+    </body>
+</html>

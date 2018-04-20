@@ -4,19 +4,19 @@
 
 <html>
     <head>
-        <title>Create Book</title>
+        <title>Edit Book</title>
     </head>
     <body>
 
-        <h1>Create Book</h1>
-        @helper.form(CSRF(routes.BooksController.save())){
+        <h1>Edit Book</h1>
+        @helper.form(CSRF(routes.BooksController.update())){
             @helper.inputText(bookFrom("id"))
             @helper.inputText(bookFrom("title"))
             @helper.inputText(bookFrom("price"))
             @helper.inputText(bookFrom("author"))
 
             <input type="submit" value="Create Book">
-        }
+            }
 
     </body>
 </html>

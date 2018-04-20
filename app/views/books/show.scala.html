@@ -1,0 +1,17 @@
+@(book : Book)
+
+<html>
+    <head>
+        <title>@book.getTitle()</title>
+    </head>
+    <body>
+        <h2>@book.getTitle()</h2>
+        <p>Price : @book.getPrice() $</p>
+        <p>Author : @book.getAuthor()</p>
+
+        <a href="@routes.BooksController.edit(book.getId())">Edit</a>
+
+        <a href="@routes.BooksController.destroy(book.getId())">Delete</a>
+
+    </body>
+</html>

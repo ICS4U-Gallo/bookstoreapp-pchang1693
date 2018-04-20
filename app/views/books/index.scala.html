@@ -9,10 +9,12 @@
         <h1>All Books</h1>
 
         @for(book <- books){
-            <a href="#">@book.getTitle()</a>
+            <a href="@routes.BooksController.show(book.getId())">@book.getTitle()</a>
             <p>Price : @book.getPrice()</p>
             <p>Author : @book.getAuthor()</p>
         }
+
+        <a href="@routes.BooksController.create()">Create Book</a>
 
     </body>
 </html>
